@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
         integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -18,7 +19,7 @@
     <header class="header">
         <div class="container">
         <nav class="header-nav">
-        <a class="logo link" href="" lang="en">Web<span class="header-logo">Studio</span></a>
+        <a class="logo link animate__pulse" href="" lang="en">Web<span class="header-logo">Studio</span></a>
         <ul class="nav-list list">
             <li class="nav-item">
                 <a class="nav-link current link" href="./index.html">Студия</a>
@@ -56,7 +57,7 @@
         <section class="hero">
             <div class="container">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="hero-modal-btn" type="button">Заказать услугу</button>
+            <button class="hero-modal-btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--About us-->
@@ -110,12 +111,15 @@
             <ul class="occupation-list list">
                 <li class="occupation-item">
                     <img class="occupation-item-img" src="./images/what-we-do/what-we-do-1.jpg" alt="Сотрудник пишет код" width="370" height="294">
+                    <p class="occupation-img-overlay">Десктопные приложения</p>
                 </li>
                 <li class="occupation-item">
                     <img class="occupation-item-img" src="./images/what-we-do/what-we-do-2.jpg" alt="Сотрудник создаёт макет" width="370" height="294">
+                    <p class="occupation-img-overlay">Мобильные приложения</p>
                 </li>
                 <li class="occupation-item">
                     <img class="occupation-item-img" src="./images/what-we-do/what-we-do-3.jpg" alt="Сотрудник подбирает цвет" width="370" height="294">
+                    <p class="occupation-img-overlay">Дизайнерские решения</p>
                 </li>
             </ul>
             </div>
@@ -380,6 +384,16 @@
                 </ul>
             </div>
             </div>
-        </footer>       
+        </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                    <svg class="close-button-icon" width="18" height="18">
+                        <use href="./images/icons.svg#icon-close-button"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
 </body>
 </html>
